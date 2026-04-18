@@ -1,4 +1,4 @@
 train: C:/Users/tannytann/PycharmProjects/yolov11/data/dataset/images/train
 val: C:/Users/tannytann/PycharmProjects/yolov11/data/dataset/images/val
-nc: 2                          # จำนวนคลาส (ในที่นี้คือ helmet และ no-helmet)
-names: ['helmet', 'no-helmet'] # รายชื่อคลาส
+nc: 2                          # Class
+names: ['helmet', 'no-helmet'] # Name of class
