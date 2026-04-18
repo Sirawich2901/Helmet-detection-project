@@ -1,13 +1,13 @@
 from ultralytics import YOLO
 
-# โหลดโมเดลที่ฝึกเสร็จแล้ว
+# Import model
 model = YOLO("C:/Users/tannytann/PycharmProjects/yolov11/yolo11s.pt")
 
-# ทำการทดสอบ (ปรับพาธไฟล์ตามที่ต้องการ)
+# Predict
 results = model("C:/Users/tannytann/PycharmProjects/yolov11/test_images", conf=0.5)  # ใช้ภาพหรือวิดีโอ
 
-# แสดงผลลัพธ์
+# Show Results
 results.show()  # แสดงภาพหรือวิดีโอที่ตรวจจับแล้ว
 
-# บันทึกผลลัพธ์
+# Save Results
 results.save()  # บันทึกผลลัพธ์เป็นไฟล์
