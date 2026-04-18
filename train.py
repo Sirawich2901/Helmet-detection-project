@@ -6,14 +6,14 @@ model = YOLO("C:/Users/tannytann/PycharmProjects/yolov11/yolo11s.pt") #Path
 # Trainmodel
 model.train(
     data="data.yaml",     # ไฟล์ data.yaml
-    epochs=50,                 # จำนวนรอบการเทรน
+    epochs=50,                 # จำนวนรอบ
     batch=32,                  # ขนาด batch
-    imgsz=640,                 # ขนาดของรูปภาพ (resolution)
-    workers=4,                 # จำนวน workers สำหรับโหลดข้อมูล
+    imgsz=640,                 # ขนาดของรูปภาพ
+    workers=4,                 # Worker
     project="C:/Users/tannytann/PycharmProjects/yolov11/runs/train",
-    name="helmet_detection"    # ชื่อการเทรน (บันทึกผลในโฟลเดอร์ runs/)
+    name="helmet_detection"    # Results folder name
 )
 
 #Show Results
-results = model.val()  # ประเมินผลโมเดล
+results = model.val()  
 print(results)
