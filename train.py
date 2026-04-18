@@ -1,9 +1,9 @@
 from ultralytics import YOLO
 
-# โหลดโมเดล YOLOv11
-model = YOLO("C:/Users/tannytann/PycharmProjects/yolov11/yolo11s.pt") # สามารถเปลี่ยนเป็น yolov11s.pt, yolov11m.pt ตามความต้องการ
+# Import YOLO
+model = YOLO("C:/Users/tannytann/PycharmProjects/yolov11/yolo11s.pt") #Path
 
-# เทรนโมเดล
+# Trainmodel
 model.train(
     data="data.yaml",     # ไฟล์ data.yaml
     epochs=50,                 # จำนวนรอบการเทรน
@@ -14,6 +14,6 @@ model.train(
     name="helmet_detection"    # ชื่อการเทรน (บันทึกผลในโฟลเดอร์ runs/)
 )
 
-# แสดงผลการเทรน
+#Show Results
 results = model.val()  # ประเมินผลโมเดล
 print(results)
