@@ -5,7 +5,7 @@ model = YOLO("C:/Users/tannytann/PycharmProjects/yolov11/yolo11s.pt") #Path
 
 # Trainmodel
 model.train(
-    data="data.yaml",     # ไฟล์ data.yaml
+    data="data.yaml",          # import data
     epochs=50,                 
     batch=32,                  # Batch size
     imgsz=640,                 # image size
